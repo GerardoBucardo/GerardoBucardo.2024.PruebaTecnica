@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GerardoBucardo.2024.PruebaTecnica\GerardoBucardo.2024.PruebaTecnica.csproj" />
+    <ProjectReference Include="..\PruebaTecnica.DAL\GerardoBucardo.2024.PruebaTecnica.DAL.csproj" />
+    <ProjectReference Include="..\PruebaTecnica.EN\GerardoBucardo.2024.PruebaTecnica.EN.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,27 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PruebaTecnica.BL;
+using PruebaTecnica.EN;
 using System.Data;
 
 namespace GerardoBucardo._2024.PruebaTecnica.Controllers
 {
     public class CategoriaController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         public async Task<ActionResult> Index()
         {
-            var role = await CategoriaBL.GetAll();
-            return View(role);
+            var categoria = await CategoriaBL.GetAll();
+            return View(categoria);
         }
 
         // GET: UserController/Details/5
         public async Task<ActionResult> Details(int id)
         {
-            var role = await RoleBL.GetById(id);
-            return View(role);
+            var categoria = await CategoriaBL.GetById(id);
+            return View(categoria);
         }
 
         // GET: UserController/Create
@@ -33,11 +29,11 @@ namespace GerardoBucardo._2024.PruebaTecnica.Controllers
         // POST: UserController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Role pRole)
+        public async Task<ActionResult> Create(Categoria pCategoria)
         {
             try
             {
-                var result = await RoleBL.Create(pRole);
+                var result = await CategoriaBL.Create(pCategoria);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -49,18 +45,18 @@ namespace GerardoBucardo._2024.PruebaTecnica.Controllers
         // GET: UserController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
-            var role = await RoleBL.GetById(id);
-            return View(role);
+            var categoria = await CategoriaBL.GetById(id);
+            return View(categoria);
         }
 
         // POST: UserController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(Role pRole)
+        public async Task<ActionResult> Edit(Categoria pCategoria)
         {
             try
             {
-                var result = await RoleBL.Update(pRole);
+                var result = await CategoriaBL.Update(pCategoria);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -72,19 +68,19 @@ namespace GerardoBucardo._2024.PruebaTecnica.Controllers
         // GET: UserController/Delete/5
         public async Task<ActionResult> Delete(int id)
         {
-            var role = await RoleBL.GetById(id);
-            return View(role);
+            var categoria = await CategoriaBL.GetById(id);
+            return View(categoria);
 
         }
 
         // POST: UserController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Delete(Role pRole)
+        public async Task<ActionResult> Delete(Categoria pCategoria)
         {
             try
             {
-                var result = await RoleBL.Delete(pRole);
+                var result = await CategoriaBL.Delete(pCategoria);
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GerardoBucardo.2024.PruebaTecnica.EN/1.0.0": {
+        "runtime": {
+          "GerardoBucardo.2024.PruebaTecnica.EN.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GerardoBucardo.2024.PruebaTecnica.EN/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

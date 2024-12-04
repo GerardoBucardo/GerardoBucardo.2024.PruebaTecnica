@@ -15,6 +15,11 @@ namespace PruebaTecnica.DAL
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
 
-        public ComunDB(DbContextOptions<ComunDB> options ):base(options) { }
+        //public ComunDB(DbContextOptions<ComunDB> options ):base(options) { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-NFDMETJ\\SQLEXPRESS;Initial Catalog=PracticaTecnicaDB;Integrated Security=True");
+        }
     }
 }
