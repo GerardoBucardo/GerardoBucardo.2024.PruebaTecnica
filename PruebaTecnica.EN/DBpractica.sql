@@ -15,7 +15,9 @@ CREATE TABLE Categorias(
 	nombre VARCHAR(100)
 )
 
-INSERT INTO Productos(nombre, precio, IdCategoria) VALUES ('m',1.50,1);
+INSERT INTO Productos(nombre, precio, IdCategoria) VALUES ('u',1.50,1);
 INSERT INTO Categorias(nombre) VALUES ('n');
 
 DROP DATABASE PracticaTecnicaDB
+
+SELECT * FROM Productos
